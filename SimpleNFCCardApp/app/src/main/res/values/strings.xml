@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">智慧門卡</string>
+    <string name="scan_card">掃描門卡</string>
+    <string name="emulate_card">模擬門卡</string>
+    <string name="stop_emulation">停止模擬</string>
+    <string name="card_uid">卡片 UID</string>
+    <string name="no_card_saved">尚未儲存門卡</string>
+    <string name="card_saved">門卡已儲存</string>
+    <string name="emulation_started">開始模擬門卡</string>
+    <string name="emulation_stopped">停止模擬門卡</string>
+    <string name="nfc_not_enabled">請先開啟 NFC 功能</string>
+    <string name="nfc_not_supported">此裝置不支援 NFC</string>
+    <string name="place_card_message">請將門卡貼近手機背面</string>
+    <string name="emulating_message">正在模擬門卡，請貼近讀卡機</string>
+</resources> 

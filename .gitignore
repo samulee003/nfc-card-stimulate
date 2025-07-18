@@ -1,0 +1,60 @@
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.metadata
+.classpath
+.settings/
+
+# Android build files
+*/build/
+*/*/build/
+*/*/*/build/
+build/
+.gradle/
+*/gradle-cache/
+*/.gradle_cache/
+gradle-cache/
+.gradle_cache/
+
+# Local configuration files
+local.properties
+*.log
+
+# Android generated files
+*.apk
+*.ap_
+*.dex
+*.class
+
+# Keystore files
+*.jks
+*.keystore
+
+# External libraries
+/.externalNativeBuild
+
+# JDK and Gradle distributions (we'll use CI/CD instead)
+java-*/
+jdk*/
+gradle-*/
+*.zip
+*.tar.gz
+
+# Temporary files
+temp/
+*/temp/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Only keep the SimpleNFCCardApp source code
+# Everything else will be downloaded by CI/CD 
