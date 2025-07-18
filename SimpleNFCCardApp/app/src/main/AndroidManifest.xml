@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- NFC permissions -->
+    <!-- Allows the app to use NFC -->
     <uses-permission android:name="android.permission.NFC" />
+    
+    <!-- Declares that the app uses NFC and requires it to be present on the device -->
     <uses-feature
         android:name="android.hardware.nfc"
         android:required="true" />
+        
+    <!-- Declares that the app uses Host Card Emulation (HCE) and requires it for core functionality -->
     <uses-feature
         android:name="android.hardware.nfc.hce"
-        android:required="false" />
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -16,29 +20,27 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.SimpleNFCCardApp">
         
-        <!-- Main Activity -->
+        <!-- Main Activity: The entry point for the app -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <!-- NFC intent filter for reading cards -->
-            <intent-filter>
-                <action android:name="android.nfc.action.TAG_DISCOVERED" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
         </activity>
 
-        <!-- HCE Service for card emulation -->
+        <!-- HCE Service: This service runs in the background to emulate the NFC card -->
         <service
             android:name=".NFCCardEmulationService"
             android:exported="true"
             android:permission="android.permission.BIND_NFC_SERVICE">
             <intent-filter>
                 <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <!-- Points to a file that describes the service, including the AID group -->
             <meta-data
                 android:name="android.nfc.cardemulation.host_apdu_service"
                 android:resource="@xml/apduservice" />

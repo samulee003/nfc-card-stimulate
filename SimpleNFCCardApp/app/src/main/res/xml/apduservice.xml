@@ -4,7 +4,14 @@
     android:requireDeviceUnlock="false">
     
     <aid-group android:description="@string/app_name" android:category="other">
-        <aid-filter android:name="F0394148148100" />
+        <!-- 
+            This is a sample AID. For a real-world application, you would replace this 
+            with the actual AID of the card system you are trying to emulate.
+            The wildcard '*' allows this service to respond to any application selection command.
+            For better security and specificity, avoid using a wildcard in production.
+        -->
+        <aid-filter android:name="F0010203040506"/>
+        <aid-filter android:name="D2760000850101"/>
     </aid-group>
     
 </host-apdu-service> 
