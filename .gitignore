@@ -57,4 +57,5 @@ ehthumbs.db
 Thumbs.db
 
 # Only keep the SimpleNFCCardApp source code
-# Everything else will be downloaded by CI/CD 
+# Everything else will be downloaded by CI/CD
+!/SimpleNFCCardApp/gradle/wrapper/gradle-wrapper.jar 
