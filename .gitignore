@@ -10,12 +10,8 @@
 
 # Android build files
 */build/
-*/*/build/
-*/*/*/build/
 build/
 .gradle/
-*/gradle-cache/
-*/.gradle_cache/
 gradle-cache/
 .gradle_cache/
 
@@ -36,17 +32,6 @@ local.properties
 # External libraries
 /.externalNativeBuild
 
-# JDK and Gradle distributions (we'll use CI/CD instead)
-java-*/
-jdk*/
-gradle-*/
-*.zip
-*.tar.gz
-
-# Temporary files
-temp/
-*/temp/
-
 # OS generated files
 .DS_Store
 .DS_Store?
@@ -56,5 +41,8 @@ temp/
 ehthumbs.db
 Thumbs.db
 
-# Explicitly un-ignore the wrapper jar. This is critical.
-!/SimpleNFCCardApp/gradle/wrapper/gradle-wrapper.jar 
+# --- CRITICAL ---
+# Explicitly un-ignore the gradle wrapper jar.
+# This rule is essential for the CI/CD build to succeed.
+!/SimpleNFCCardApp/gradle/wrapper/gradle-wrapper.jar
+!/gradle/wrapper/gradle-wrapper.jar 
