@@ -41,8 +41,24 @@ local.properties
 ehthumbs.db
 Thumbs.db
 
+# --- EXCLUDE LARGE FILES ---
+# JDK distributions and binaries
+java-*/
+jdk*/
+OpenJDK*/
+*.tar.gz
+
+# Gradle distributions
+gradle-[0-9]*/
+gradle-*.zip
+*gradle*.zip
+
+# Other large files
+*.zip
+temp/
+
 # --- CRITICAL ---
-# Explicitly un-ignore the gradle wrapper jar.
-# This rule is essential for the CI/CD build to succeed.
+# Explicitly un-ignore ONLY the gradle wrapper jar.
+# This is the only large file we actually need.
 !/SimpleNFCCardApp/gradle/wrapper/gradle-wrapper.jar
 !/gradle/wrapper/gradle-wrapper.jar 
